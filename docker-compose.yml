@@ -45,6 +45,7 @@ services:
       context: ./frontend
       dockerfile: ../docker/frontend/Dockerfile
     container_name: casilla_electronica_service_frontend
+    command: sh -c "npm install && npm run dev"
     ports:
       - "5178:5178"    
     networks:
